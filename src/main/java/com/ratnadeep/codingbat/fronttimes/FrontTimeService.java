@@ -9,10 +9,7 @@ public class FrontTimeService {
 		}
 		
 		String stringCopy = "";
-		int frontLen = 3;
-		if(frontLen > str.length()) {
-			frontLen = str.length();
-		}
+		int frontLen = Math.min(3, str.length());
 		String frontString = str.substring(0,frontLen);
 		for(int i = 0; i < n; i++) {
 			stringCopy =  stringCopy + frontString;
